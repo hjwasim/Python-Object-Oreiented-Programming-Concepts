@@ -17,8 +17,8 @@ class InstanceMethodClass:
 
 instancevar = InstanceMethodClass()
 
-# We can instance static methods using object, we can any parameters for instance variable initialization.
-#self automatically passed by python
+# We can call instance methods using object, we can any no.of parameters for instance variable initialization.
+# self automatically passed by python
 print(instancevar.cname) 
 print(instancevar.instance_method())
 #If We call instance method using Classname,we must pass our reference_variable/object to the method parameter
@@ -32,7 +32,7 @@ class ClassMethodClass:
 
     @classmethod
     def class_method(cls):
-        print(cls.cname)  # class variables only accesible
+        print(cls.cname)  # class variables only accesible, Not instance variable
         return "This is a class method."
 
 
@@ -46,6 +46,7 @@ class StaticMethodClass:
     # No access to class attributes
     @staticmethod
     def static_method():
+         # we cannot access any class/instance attributes
         return "This is a static method."
 
 
